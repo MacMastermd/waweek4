@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <li class="nav-item text-left">
+                <a href="#">View Highscores</a>
+            </li>
+            <li class="nav-item text-right">
+                Time:
+                <span id="timer">0</span>
+            </li>
+        </nav>
+    </div>
+    <div class="container">
+        <div id="startScreen" class="text-center vertical-center">
+            <h1>Coding Quiz Challenge</h1>
+            <p>answer the questions within the time limit. incorrect answers will lower your scoreand decrease your time by ten seconds.</p>
+            <button id="startBtn" class="btn btn-info">Start Quiz</button>
+        </div>
+        <!-- Game container-->
+        <div id="gameScreen" class="text-center vertical-center hide">
+            <h2 id="question" class="question-text"></h2>
+            <div class="choice-container">
+            </div>
+            <div id="wrongDiv" class="hide">
+                <hr>
+                <p><em>Incorrect</em></p>
+            </div>
+            <div id="correctDiv" class="hide">
+                <hr>
+                <p><em>Correct</em></p>
+            </div>
+        </div> 
+        <!-- End Game Container-->
+        <!-- Quiz end container-->
+        <div id="endScreen" class="text-center vertical-center hide">
+            <h2>Pencils down</h2>
+            <p>Final score:<span id="finalScore"> </span></p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter your initials" aria-label="initials" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-info" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- End quiz container-->
+        <!-- Highscores container-->
+        <div id="highScores" class="text-center vertical-center hide">
+            <h2>Pencils down</h2>
+            <div id="highScores">
+            </div>
+            <button class="btn btn-primary" type="submit"><a href="index.html" class="text-white"> Go Back</a></button>
+            <button class="btn btn-outline-danger" type="submit">Clear Highscores</button>
+        </div>
+        <!-- End highscores container-->
+    </div> <!-- End Main Container -->
+    
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
